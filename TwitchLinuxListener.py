@@ -7,7 +7,6 @@ config = {
 }
 
 class Chat:
-
     def __init__(self):
 
         self.socket = socket()
@@ -26,7 +25,7 @@ class Chat:
             for line in read_buffer_join.split('\n')[0:-1]:
                 loading = 'End of /NAMES list' not in line
 
-    def listen(self) -> (str, str):
+    def listen(self) -> tuple[str, str]:
         read_buffer = self.socket.recv(1024).decode()
         for line in read_buffer.split('\r\n'):
             if 'PING' in line and 'PRIVMSG' not in line:
