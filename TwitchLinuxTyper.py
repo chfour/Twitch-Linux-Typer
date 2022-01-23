@@ -14,5 +14,3 @@ while True:
         else:
             pyautogui.write(message, interval = 0.2)
             pyautogui.press('enter')
-
-

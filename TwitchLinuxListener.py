@@ -35,4 +35,3 @@ class Chat:
             elif line != '':
                 parts = line.split(':', 2)
                 return parts[1].split('!', 1)[0], parts[2] 
-
